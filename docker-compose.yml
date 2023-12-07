@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  postgresql:
+    image: postgres:9.5-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DBNAME=bitspawn
+      - PGDATABASE=bitspawn
+    volumes:
+      - ./scripts/db:/docker-entrypoint-initdb.d/
+    ports:
+      - "5432:5432"

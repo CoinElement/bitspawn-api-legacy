@@ -1,0 +1,15 @@
+http_port: 8080
+gin_mode: debug
+
+log_level: 5 # debug level
+log_file_location: /app/logs/app.log
+
+db_type: postgres
+db_path: host=pg-sandbox-1.ccrqhjaryzeo.us-east-2.rds.amazonaws.com port=5432 user=postgres dbname=bitspawn password=sc0zwmtRxNGx2hqd7ZrW
+
+awsconfig:
+  cognito_region: us-east-1
+  cognito_user_pool_id: us-east-1_WeNTmaJ8b
+  s3_bucket_name: bitspawnavatar-dev
+  sqs_queue_url: https://sqs.us-east-1.amazonaws.com/316816644227/bitspawn-notification-dev
+  sqs_queue_name_tx: bitspawn-notification-dev

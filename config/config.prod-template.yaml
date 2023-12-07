@@ -1,0 +1,15 @@
+http_port: 8080
+gin_mode: release
+
+log_level: 4 # info level
+log_file_location: /app/logs/app.log
+
+db_type: postgres
+db_path: host=bitspawn-prod-database.cfhfizysnrbq.us-east-1.rds.amazonaws.com port=5432 user=postgres dbname=bitspawn password=Bitspawn123
+
+awsconfig:
+  cognito_region: us-east-1
+  cognito_user_pool_id: us-east-1_MRVqsL4Cw
+  s3_bucket_name: bitspawn-prod-image
+  sqs_queue_url: https://sqs.us-east-1.amazonaws.com/316816644227/bitspawn-notification-prod
+  sqs_queue_name_tx: bitspawn-notification-prod
